@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import BasicInfo from './components/Basicinfo';
+import { render } from '@testing-library/react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props){
+    super(props)
+    this.state ={
+      person: [
+        {
+          name: "Rehan Siraj",
+          number: "980-999-9999",
+          dob: "12/12/1912"
+        },
+        {
+          name: "DJ Khaled",
+          number: "980-989-9889",
+          dob: "11/11/1911"
+        },
+        {
+          name: "Justin McNeil",
+          number: "980-919-9119",
+          dob: "10/10/1910"
+        }
+      ]
+    }
+  }
+  render(){
+    let people = this.state.person;
+    return (
+      <BasicInfo data={people}/>
+    );
+  }
 }
 
 export default App;
