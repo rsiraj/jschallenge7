@@ -27,9 +27,8 @@ class App extends React.Component {
     }
   }
   render(){
-    let people = this.state.person;
     return (
-      <BasicInfo data={people}/>
+      <BasicInfo data={this.state.person}/>
     );
   }
 }
