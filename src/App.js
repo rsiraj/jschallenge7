@@ -4,8 +4,8 @@ import BasicInfo from './components/Basicinfo';
 import { render } from '@testing-library/react';
 
 class App extends React.Component {
-  constructor(props){
-    super(props)
+  constructor(){
+    super()
     this.state ={
       person: [
         {
